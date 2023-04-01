@@ -1,7 +1,7 @@
 {
   "name": "rb-files-crop",
-  "version": "0.0.1",
-  "description": "基于react+antd的upload文件编辑容器组件",
+  "version": "1.0.0",
+  "description": "基于react+antd的upload上传前文件编辑容器组件",
   "main": "lib/rb-files-crop.cjs.js",
   "module": "lib/rb-files-crop.esm.js",
   "types": "lib/rb-files-crop.d.ts",
@@ -12,13 +12,20 @@
   "keywords": [
     "react",
     "antd",
+    "ant-design",
     "upload",
-    "crop"
+    "files",
+    "crop",
+    "react-cropper"
   ],
   "files": [
-    "lib"
+    "lib",
+    "LICENSE",
+    "README"
   ],
-  "author": "luzhixin <2609094817@qq.com>",
+  "author": "luzhixin <2609094817@qq.com> (https://github.com/Monsterlzx)",
+  "homepage": "https://github.com/Monsterlzx/rb-files-crop",
+  "bugs": "https://github.com/Monsterlzx/rb-files-crop/issues",
   "license": "MIT",
   "peerDependencies": {
     "antd": ">=4.0.0",
