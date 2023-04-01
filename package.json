@@ -1,0 +1,52 @@
+{
+  "name": "rb-files-crop",
+  "version": "0.0.1",
+  "description": "基于react+antd的upload文件编辑容器组件",
+  "main": "lib/rb-files-crop.cjs.js",
+  "module": "lib/rb-files-crop.esm.js",
+  "types": "lib/rb-files-crop.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && yarn run rollup -c --configPlugin @rollup/plugin-typescript",
+    "start": "yarn run rollup -c --configPlugin @rollup/plugin-typescript -w"
+  },
+  "keywords": [
+    "react",
+    "antd",
+    "upload",
+    "crop"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "luzhixin <2609094817@qq.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "antd": ">=4.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/rollup-plugin-less": "^1.1.2",
+    "antd": "^5.3.2",
+    "eslint": "^8.36.0",
+    "eslint-config-react-app": "^7.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.18.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-less": "^1.1.3",
+    "rollup-plugin-svg": "^2.0.0"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.1",
+    "compare-versions": "^6.0.0-rc.1",
+    "lodash": "^4.17.21",
+    "react-cropper": "^2.3.2",
+    "tslib": "^2.5.0"
+  }
+}

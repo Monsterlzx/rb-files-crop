@@ -1,0 +1,177 @@
+@PREFIX: rb-files-crop;
+
+.@{PREFIX}-modal {
+  .@{PREFIX}-modal-container {
+    width: 100%;
+    height: 50vh;
+    overflow-y: auto;
+
+    display: flex;
+
+    .@{PREFIX}-list-container {
+      width: 25%;
+      height: calc(100% - 0.3rem); // 父级高度50vh-上下边框0.3rem
+      overflow: auto;
+      border: solid 0.15rem #bdc3c7;
+      border-radius: 0.15rem;
+
+      .@{PREFIX}-list-item-container {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        padding: 0.5rem 0;
+        text-align: center;
+
+        .@{PREFIX}-list-item-index {
+          position: absolute;
+          min-width: 1.25rem;
+          max-width: 3rem;
+          height: 1.25rem;
+          line-height: 1.25rem;
+          background-color: #2ecc71;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          border-top-left-radius: 0.15rem;
+          border-bottom-right-radius: 0.15rem;
+          left: 0.075rem; // 不是border的0.1，稍微小一点
+          top: 0.6rem; // container的padding的0.5+border的0.1
+        }
+
+        .@{PREFIX}-list-item-img-container {
+          width: 100%;
+          background-color: #ecf0f1;
+          cursor: pointer;
+          border-radius: 0.15rem;
+          border: solid 0.1rem #eee;
+
+          .@{PREFIX}-list-item-img {
+            width: 100%;
+            height: 4.25rem;
+            border-top-left-radius: 0.15rem;
+            border-top-right-radius: 0.15rem;
+          }
+
+          .@{PREFIX}-list-item-img-name {
+            width: 100%;
+            transform: scale(0.85);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .@{PREFIX}-list-item-img-size {
+            width: 100%;
+            transform: scale(0.75);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: rgb(140, 140, 140);
+          }
+        }
+
+        .@{PREFIX}-list-item-img-container-active {
+          border: solid 0.1rem #1677ff;
+          border-radius: 0.25rem; // 原先的0.15+border的0.1
+        }
+      }
+    }
+
+    // 去除滚动条显示
+    .@{PREFIX}-list-container::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .@{PREFIX}-edit-container {
+      flex: 1;
+      padding-left: 1rem;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .@{PREFIX}-edit {
+        width: 80%;
+        height: 40vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .@{PREFIX}-edit-crop {
+          width: 100%;
+          height: 40vh;
+        }
+
+        .@{PREFIX}-not-edit-container {
+          width: 100%;
+          text-align: center;
+          margin: auto 0;
+
+          & > img {
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+
+      .@{PREFIX}-edit-btn-container {
+        width: 100%;
+        height: 10vh;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 2rem;
+
+        .@{PREFIX}-btn-slider {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          & > div.ant-slider {
+            width: 75%;
+          }
+        }
+
+        .@{PREFIX}-btn-input {
+          flex: 1;
+
+          & > span > input {
+            border-bottom: #bdc3c7 solid 0.1rem;
+          }
+
+          & > span > input:focus {
+            border-bottom: #1677ff solid 0.1rem;
+          }
+        }
+
+        & > button {
+          margin-left: 1rem;
+          color: #fff;
+          background-color: #1677ff;
+          box-shadow: 0 0.1rem 0 rgb(5 145 255 / 10%);
+          border-radius: 0.3rem;
+          font-size: 0.8rem;
+          cursor: pointer;
+          user-select: none;
+          border: 0.1rem solid transparent;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji';
+        }
+
+        & > button:hover {
+          background-color: #4096ff;
+        }
+      }
+    }
+  }
+}
