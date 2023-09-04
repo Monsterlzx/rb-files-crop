@@ -1,12 +1,12 @@
 {
   "name": "rb-files-crop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于react+antd的upload上传前文件编辑容器组件",
   "main": "lib/rb-files-crop.cjs.js",
   "module": "lib/rb-files-crop.esm.js",
   "types": "lib/rb-files-crop.d.ts",
   "scripts": {
-    "build": "rm -rf dist && yarn run rollup -c --configPlugin @rollup/plugin-typescript",
+    "build": "rm -rf lib && yarn run rollup -c --configPlugin @rollup/plugin-typescript",
     "start": "yarn run rollup -c --configPlugin @rollup/plugin-typescript -w"
   },
   "keywords": [
